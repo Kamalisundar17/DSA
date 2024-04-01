@@ -22,7 +22,7 @@ char* re(char s[]){
     int j=0;
      static char res[100];
     for(int i=0;s[i]!='\0';i++){
-        if(s[i]==41){
+        if(s[i]==41){ // ASCII 41=')'
             j--;
         }
         if(j!=0){
@@ -31,7 +31,7 @@ char* re(char s[]){
              // strncat(res, &s[i], 1); -> The above 2 lines can be replaced with this single line, It sets res[last]=s[i] and res[last+1]='\0'
           
         }
-        if(s[i]==40){
+        if(s[i]==40){  // ASCII 40='('
             j++;
         }
     }
